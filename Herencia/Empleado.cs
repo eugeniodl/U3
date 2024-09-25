@@ -21,10 +21,10 @@
 class EmpleadoTiempoCompleto : Empleado
 {
     public EmpleadoTiempoCompleto(string nombre, int horasTrabajadas, 
-        decimal tarifaPorHora) : base(nombre, horasTrabajadas, tarifaPorHora)
+        decimal tarifaPorHora) : 
+        base(nombre, horasTrabajadas, tarifaPorHora)
     {
     }
-
     public override decimal CalcularSalario()
     {
         decimal salarioBase = base.CalcularSalario();
@@ -38,10 +38,11 @@ class EmpleadoContratista : Empleado
         decimal tarifaPorHora) : base(nombre, horasTrabajadas, tarifaPorHora)
     {
     }
+
     public override decimal CalcularSalario()
     {
-        decimal salarioBase = base.CalcularSalario();
-        decimal retencion = salarioBase * 0.1m; // Retención de impuestos del 10%
-        return salarioBase - retencion;
+        decimal salariobase = base.CalcularSalario();
+        decimal retencion = salariobase * 0.1m; // Retención de impuestos del 10%
+        return salariobase - retencion;
     }
 }

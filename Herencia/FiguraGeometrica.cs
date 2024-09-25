@@ -1,8 +1,9 @@
-﻿abstract class FiguraGeometrica
+﻿using System.Runtime;
+
+abstract class FiguraGeometrica
 {
     public abstract double CalcularArea();
     public abstract double CalcularPerimetro();
-
     public void MostrarInformacion()
     {
         Console.WriteLine($"Área: {CalcularArea()}");
@@ -14,7 +15,6 @@ class Rectangulo : FiguraGeometrica
 {
     private double largo;
     private double ancho;
-
     public Rectangulo(double largo, double ancho)
     {
         this.largo = largo;
@@ -27,19 +27,7 @@ class Rectangulo : FiguraGeometrica
 
     public override double CalcularPerimetro()
     {
-        return 2 * (largo + ancho);
+        return 2 * (largo * ancho);
     }
 }
 
-class Circulo : FiguraGeometrica
-{
-    public override double CalcularArea()
-    {
-        throw new NotImplementedException();
-    }
-
-    public override double CalcularPerimetro()
-    {
-        throw new NotImplementedException();
-    }
-}

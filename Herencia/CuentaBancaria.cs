@@ -2,29 +2,29 @@
 {
     protected decimal saldo;
 
-    public CuentaBancaria(decimal saldoInicial)
+    public CuentaBancaria(decimal saldoIncial)
     {
-        saldo = saldoInicial;
+        saldo = saldoIncial;
     }
 
-    public void Depositar(decimal cantidad)
+    public void Depositar(decimal monto)
     {
-        saldo += cantidad;
-        Console.WriteLine($"Depósito de {cantidad} realizado. " +
-            $"Nuevo saldo: {saldo}");
+        saldo += monto;
+        Console.WriteLine($"Depósito de {monto} realizado. " +
+            $"Nuevo saldo: {saldo}.");
     }
 
-    public virtual void Retirar(decimal cantidad)
+    public void Retirar(decimal monto)
     {
-        if(cantidad <= saldo)
+        if(monto <= saldo)
         {
-            saldo -= cantidad;
-            Console.WriteLine($"Retiro de {cantidad} realizado. " +
-                $"Nuevo saldo: {saldo}");
+            saldo -= monto;
+            Console.WriteLine($"Retiro de {monto} realizado. " +
+                $"Nuevo saldo: {saldo}.");
         }
         else
         {
-            Console.WriteLine("Fondos insuficientes");
+            Console.WriteLine("Fondos insuficientes.");
         }
     }
 
@@ -37,8 +37,8 @@
 class CuentaAhorros : CuentaBancaria
 {
     private decimal tasaInteres;
-    public CuentaAhorros(decimal saldoInicial, decimal tasaInteres) 
-        : base(saldoInicial)
+    public CuentaAhorros(decimal saldoIncial, decimal tasaInteres) 
+        : base(saldoIncial)
     {
         this.tasaInteres = tasaInteres;
     }
@@ -55,19 +55,19 @@ class CuentaAhorros : CuentaBancaria
 class CuentaCorriente : CuentaBancaria
 {
     private decimal limiteSobregiro;
-    public CuentaCorriente(decimal saldoInicial, decimal limiteSobregiro) 
-        : base(saldoInicial)
+    public CuentaCorriente(decimal saldoIncial, decimal limiteSobregiro) 
+        : base(saldoIncial)
     {
         this.limiteSobregiro = limiteSobregiro;
     }
 
-    public override void Retirar(decimal cantidad)
+    public new void Retirar(decimal monto)
     {
-        if(cantidad <= saldo + limiteSobregiro)
+        if( monto <= saldo + limiteSobregiro )
         {
-            saldo -= cantidad;
-            Console.WriteLine($"Retiro de {cantidad} realizado. " +
-                $"Nuevo saldo: {saldo}");
+            saldo -= monto;
+            Console.WriteLine($"Retiro de {monto} realizado. " +
+                $"Nuevo saldo: {saldo}.");
         }
         else
         {
