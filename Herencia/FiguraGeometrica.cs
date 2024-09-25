@@ -1,4 +1,6 @@
-﻿abstract class FiguraGeometrica
+﻿using System.Transactions;
+
+abstract class FiguraGeometrica
 {
     public abstract double CalcularArea();
     public abstract double CalcularPerimetro();
@@ -33,13 +35,20 @@ class Rectangulo : FiguraGeometrica
 
 class Circulo : FiguraGeometrica
 {
+    private double radio;
+
+    public Circulo(double radio)
+    {
+        this.radio = radio;
+    }
+
     public override double CalcularArea()
     {
-        throw new NotImplementedException();
+        return Math.PI * radio * radio;
     }
 
     public override double CalcularPerimetro()
     {
-        throw new NotImplementedException();
+        return 2 * Math.PI * radio;
     }
 }

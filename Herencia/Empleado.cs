@@ -20,8 +20,9 @@
 
 class EmpleadoTiempoCompleto : Empleado
 {
-    public EmpleadoTiempoCompleto(string nombre, int horasTrabajadas, 
-        decimal tarifaPorHora) : base(nombre, horasTrabajadas, tarifaPorHora)
+    public EmpleadoTiempoCompleto(string nombre, 
+        int horasTrabajadas, decimal tarifaPorHora) 
+        : base(nombre, horasTrabajadas, tarifaPorHora)
     {
     }
 
@@ -38,6 +39,7 @@ class EmpleadoContratista : Empleado
         decimal tarifaPorHora) : base(nombre, horasTrabajadas, tarifaPorHora)
     {
     }
+
     public override decimal CalcularSalario()
     {
         decimal salarioBase = base.CalcularSalario();

@@ -1,7 +1,6 @@
 ﻿class CuentaBancaria
 {
     protected decimal saldo;
-
     public CuentaBancaria(decimal saldoInicial)
     {
         saldo = saldoInicial;
@@ -10,21 +9,20 @@
     public void Depositar(decimal cantidad)
     {
         saldo += cantidad;
-        Console.WriteLine($"Depósito de {cantidad} realizado. " +
-            $"Nuevo saldo: {saldo}");
+        Console.WriteLine($"Depósito de {cantidad} " +
+            $"realizado. Nuevo saldo: {saldo}.");
     }
-
     public virtual void Retirar(decimal cantidad)
     {
         if(cantidad <= saldo)
         {
             saldo -= cantidad;
-            Console.WriteLine($"Retiro de {cantidad} realizado. " +
-                $"Nuevo saldo: {saldo}");
+            Console.WriteLine($"Retiro de {cantidad} " +
+                $"realizado. Nuevo saldo: {saldo}.");
         }
         else
         {
-            Console.WriteLine("Fondos insuficientes");
+            Console.WriteLine("Fondos insuficientes.");
         }
     }
 
@@ -36,8 +34,9 @@
 
 class CuentaAhorros : CuentaBancaria
 {
-    private decimal tasaInteres;
-    public CuentaAhorros(decimal saldoInicial, decimal tasaInteres) 
+    private decimal tasaInteres;    
+    public CuentaAhorros(decimal saldoInicial, 
+        decimal tasaInteres) 
         : base(saldoInicial)
     {
         this.tasaInteres = tasaInteres;
@@ -55,7 +54,8 @@ class CuentaAhorros : CuentaBancaria
 class CuentaCorriente : CuentaBancaria
 {
     private decimal limiteSobregiro;
-    public CuentaCorriente(decimal saldoInicial, decimal limiteSobregiro) 
+    public CuentaCorriente(decimal saldoInicial, 
+        decimal limiteSobregiro) 
         : base(saldoInicial)
     {
         this.limiteSobregiro = limiteSobregiro;
@@ -66,8 +66,8 @@ class CuentaCorriente : CuentaBancaria
         if(cantidad <= saldo + limiteSobregiro)
         {
             saldo -= cantidad;
-            Console.WriteLine($"Retiro de {cantidad} realizado. " +
-                $"Nuevo saldo: {saldo}");
+            Console.WriteLine($"Retiro de {cantidad} " +
+                $"realizado. Nuevo saldo: {saldo}");
         }
         else
         {
