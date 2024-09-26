@@ -1,6 +1,4 @@
-﻿using System.Runtime;
-
-abstract class FiguraGeometrica
+﻿abstract class FiguraGeometrica
 {
     public abstract double CalcularArea();
     public abstract double CalcularPerimetro();
@@ -28,6 +26,25 @@ class Rectangulo : FiguraGeometrica
     public override double CalcularPerimetro()
     {
         return 2 * (largo * ancho);
+    }
+}
+
+class Ciculo : FiguraGeometrica
+{
+    private double radio;
+
+    public Ciculo(double radio)
+    {
+        this.radio = radio;
+    }
+    public override double CalcularArea()
+    {
+        return Math.PI * radio * radio;
+    }
+
+    public override double CalcularPerimetro()
+    {
+        return 2 * Math.PI * radio;
     }
 }
 
