@@ -14,7 +14,7 @@
             $"Nuevo saldo: {saldo}");
     }
 
-    public virtual void Retirar(decimal cantidad)
+    public void Retirar(decimal cantidad)
     {
         if(cantidad <= saldo)
         {
@@ -61,7 +61,7 @@ class CuentaCorriente : CuentaBancaria
         this.limiteSobregiro = limiteSobregiro;
     }
 
-    public override void Retirar(decimal cantidad)
+    public new void Retirar(decimal cantidad)
     {
         if(cantidad <= saldo + limiteSobregiro)
         {
