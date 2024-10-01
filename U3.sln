@@ -5,7 +5,13 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Herencia", "Herencia\Herencia.csproj", "{8440E07D-7A79-4399-8997-F468F0F48CD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacturacionProductos", "FacturacionProductos\FacturacionProductos.csproj", "{E5F89D62-23D1-4461-A440-676F976AEC6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacturacionProductos", "FacturacionProductos\FacturacionProductos.csproj", "{E5F89D62-23D1-4461-A440-676F976AEC6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploObject", "EjemploObject\EjemploObject.csproj", "{D50A15A4-3E4D-4EBA-94BE-1360B24915A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjemploInterfaz", "EjemploInterfaz\EjemploInterfaz.csproj", "{E66E6949-D23A-47D8-BFE8-EBA467BBBF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfacesForm", "InterfacesForm\InterfacesForm.csproj", "{BC7CF8AF-3548-4680-8D3E-0437F0CAAB91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{E5F89D62-23D1-4461-A440-676F976AEC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E5F89D62-23D1-4461-A440-676F976AEC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E5F89D62-23D1-4461-A440-676F976AEC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50A15A4-3E4D-4EBA-94BE-1360B24915A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50A15A4-3E4D-4EBA-94BE-1360B24915A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50A15A4-3E4D-4EBA-94BE-1360B24915A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50A15A4-3E4D-4EBA-94BE-1360B24915A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66E6949-D23A-47D8-BFE8-EBA467BBBF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66E6949-D23A-47D8-BFE8-EBA467BBBF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66E6949-D23A-47D8-BFE8-EBA467BBBF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66E6949-D23A-47D8-BFE8-EBA467BBBF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7CF8AF-3548-4680-8D3E-0437F0CAAB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7CF8AF-3548-4680-8D3E-0437F0CAAB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7CF8AF-3548-4680-8D3E-0437F0CAAB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7CF8AF-3548-4680-8D3E-0437F0CAAB91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
