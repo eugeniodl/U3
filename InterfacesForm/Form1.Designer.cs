@@ -75,6 +75,7 @@
             btnDetener.TabIndex = 3;
             btnDetener.Text = "Detener";
             btnDetener.UseVisualStyleBackColor = true;
+            btnDetener.Click += btnDetener_Click;
             // 
             // btnCargarDescargar
             // 
@@ -85,6 +86,7 @@
             btnCargarDescargar.TabIndex = 4;
             btnCargarDescargar.Text = "Cargar/Descargar";
             btnCargarDescargar.UseVisualStyleBackColor = true;
+            btnCargarDescargar.Click += btnCargarDescargar_Click;
             // 
             // Form1
             // 
