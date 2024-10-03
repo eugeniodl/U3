@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace NotificacionesForm
 {
+    // Gestor de notificaciones para manejar el envío (DIP)
     internal class NotificationManager
     {
         private readonly INotificationService _notificationService;
