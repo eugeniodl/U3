@@ -41,77 +41,96 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(310, 19);
+            label1.Font = new Font("Segoe UI", 15.8571434F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(367, 13);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(104, 20);
+            label1.Size = new Size(272, 50);
             label1.TabIndex = 0;
             label1.Text = "Notificaciones";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(58, 64);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(43, 99);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(62, 20);
+            label2.Size = new Size(117, 38);
             label2.TabIndex = 1;
             label2.Text = "Usuario:";
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(212, 61);
+            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUsuario.Location = new Point(273, 96);
+            txtUsuario.Margin = new Padding(4);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(237, 27);
+            txtUsuario.Size = new Size(354, 45);
             txtUsuario.TabIndex = 2;
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(498, 59);
+            btnAgregar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAgregar.Location = new Point(700, 89);
+            btnAgregar.Margin = new Padding(4);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(94, 29);
+            btnAgregar.Size = new Size(141, 59);
             btnAgregar.TabIndex = 3;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(59, 113);
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(43, 172);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(67, 20);
+            label3.Size = new Size(127, 38);
             label3.TabIndex = 4;
             label3.Text = "Mensaje:";
             // 
             // txtMensaje
             // 
-            txtMensaje.Location = new Point(212, 110);
+            txtMensaje.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMensaje.Location = new Point(273, 169);
+            txtMensaje.Margin = new Padding(4);
             txtMensaje.Multiline = true;
             txtMensaje.Name = "txtMensaje";
-            txtMensaje.Size = new Size(380, 177);
+            txtMensaje.Size = new Size(568, 264);
             txtMensaje.TabIndex = 5;
             // 
             // btnEnviarEmail
             // 
-            btnEnviarEmail.Location = new Point(212, 303);
+            btnEnviarEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEnviarEmail.Location = new Point(273, 458);
+            btnEnviarEmail.Margin = new Padding(4);
             btnEnviarEmail.Name = "btnEnviarEmail";
-            btnEnviarEmail.Size = new Size(173, 29);
+            btnEnviarEmail.Size = new Size(260, 60);
             btnEnviarEmail.TabIndex = 6;
             btnEnviarEmail.Text = "Enviar por Email";
             btnEnviarEmail.UseVisualStyleBackColor = true;
+            btnEnviarEmail.Click += btnEnviarEmail_Click;
             // 
             // btnEnviarSMS
             // 
-            btnEnviarSMS.Location = new Point(437, 303);
+            btnEnviarSMS.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEnviarSMS.Location = new Point(611, 458);
+            btnEnviarSMS.Margin = new Padding(4);
             btnEnviarSMS.Name = "btnEnviarSMS";
-            btnEnviarSMS.Size = new Size(155, 29);
+            btnEnviarSMS.Size = new Size(232, 60);
             btnEnviarSMS.TabIndex = 7;
             btnEnviarSMS.Text = "Enviar por SMS";
             btnEnviarSMS.UseVisualStyleBackColor = true;
+            btnEnviarSMS.Click += btnEnviarSMS_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(711, 362);
+            ClientSize = new Size(965, 543);
             Controls.Add(btnEnviarSMS);
             Controls.Add(btnEnviarEmail);
             Controls.Add(txtMensaje);
@@ -120,6 +139,7 @@
             Controls.Add(txtUsuario);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(4);
             Name = "MainForm";
             Text = "MainForm";
             ResumeLayout(false);
